@@ -1,5 +1,6 @@
-// import statement to use ArrayList
+// import statement to use ArrayList and Scanner
 import java.util.ArrayList;
+import java.util.Scanner;
 // PrimeDirective class
 class PrimeDirective {
     // method to check if number is prime
@@ -35,6 +36,15 @@ class PrimeDirective {
         }
         return primes;
     } 
+    // printEvenOrOdd method to print even or odd to the console
+    public void printEvenOrOdd() {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Please enter a number!");
+
+        int userInput = reader.nextInt();
+        if(userInput % 2 == 0)
+    }
+
     // main method
     public static void main(String[] args) {
         // create new class
