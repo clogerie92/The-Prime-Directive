@@ -25,7 +25,15 @@ class PrimeDirective {
     ArrayList<Integer> onlyPrime(int[] numbers) {
         // primes ArrayList
         ArrayList<Integer> primes = new ArrayList<Integer>();
-        
+        // loop through each number is primes ArrayList to determine if prime
+        for(int number : numbers) {
+            // check if number is prime with isPrime method
+            if(isPrime(number)) {
+                // add prime number to primes ArrayList
+                primes.add(number);
+            }
+        }
+        return primes;
     } 
     // main method
     public static void main(String[] args) {
