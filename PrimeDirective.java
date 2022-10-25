@@ -38,15 +38,37 @@ class PrimeDirective {
     } 
     // printEvenOrOdd method to print even or odd to the console
     public void printEvenOrOdd() {
+        // create reader object to read user input
         Scanner reader = new Scanner(System.in);
+        // prompt user to enter a number
         System.out.println("Please enter a number!");
-
+        // store user input as userInput
         int userInput = reader.nextInt();
+        // check if userInput is even or odd
         if(userInput % 2 == 0) {
+            // print if userInput is even
             System.out.println("The number " + userInput + " is even!");
+            // otherwise print userInput is odd
         } else {
             System.out.println("The number " + userInput + " is odd!");
         }
+    }
+    // printNPrimes()
+    public ArrayList<Integer> printNPrimes(int x, int[] nums) {
+        // create new ArrayList for prime numbers
+        ArrayList<Integer> nPrime = new ArrayList<Integer>();
+        // loop through nums array
+        for(int j = 0; j < nums.length; j++) {
+            // if number in nums array is prime add it to nPrime ArrayList
+            if(isPrime(nums[j])) {
+                // looping as many times as desired number of primes
+                while(nPrime.size() < x) {
+                    // add number in nums array to nPrime ArrayList
+                    nPrime.add(nums[j]);
+                }
+            }
+        }
+        return nPrime;
     }
 
     // main method
@@ -54,7 +76,7 @@ class PrimeDirective {
         // create new class
         PrimeDirective pd = new PrimeDirective();
         // numbers to test
-        int[] numbers = {11, 100, 101, 43, 89};
+        int[] numbers = {6, 29, 28, 33, 11, 100, 101, 43, 89};
         // print statements
         System.out.println(pd.isPrime(11));
         System.out.println(pd.isPrime(100));
@@ -62,6 +84,8 @@ class PrimeDirective {
         System.out.println(pd.isPrime(43));
         System.out.println(pd.isPrime(89));
         System.out.println(pd.onlyPrime(numbers));
+        System.out.println(pd.printNPrimes(3, numbers));
+        // call printEvenOrOdd on pd
         pd.printEvenOrOdd();
     }
 }
