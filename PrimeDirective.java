@@ -42,7 +42,11 @@ class PrimeDirective {
         System.out.println("Please enter a number!");
 
         int userInput = reader.nextInt();
-        if(userInput % 2 == 0)
+        if(userInput % 2 == 0) {
+            System.out.println("The number " + userInput + " is even!");
+        } else {
+            System.out.println("The number " + userInput + " is odd!");
+        }
     }
 
     // main method
@@ -58,5 +62,6 @@ class PrimeDirective {
         System.out.println(pd.isPrime(43));
         System.out.println(pd.isPrime(89));
         System.out.println(pd.onlyPrime(numbers));
+        pd.printEvenOrOdd();
     }
 }
