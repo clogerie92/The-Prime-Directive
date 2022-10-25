@@ -37,6 +37,16 @@ class PrimeDirective {
     } 
     // main method
     public static void main(String[] args) {
-        
+        // create new class
+        PrimeDirective pd = new PrimeDirective();
+        // numbers to test
+        int[] numbers = {11, 100, 101, 43, 89};
+        // print statements
+        System.out.println(pd.isPrime(11));
+        System.out.println(pd.isPrime(100));
+        System.out.println(pd.isPrime(101));
+        System.out.println(pd.isPrime(43));
+        System.out.println(pd.isPrime(89));
+        System.out.println(pd.onlyPrime(numbers));
     }
 }
