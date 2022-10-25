@@ -71,6 +71,27 @@ class PrimeDirective {
         return nPrime;
     }
 
+    // printNFibonacci()
+    public ArrayList<Integer> printNFibonacci(int y) {
+        // create new ArrayList for Fibonacci sequence
+        ArrayList<Integer> nFib = new ArrayList<Integer>();
+        // added starting numbers
+        nFib.add(0);
+        nFib.add(0);
+        // if number is less than 2 return
+        if(y < 2) {
+            return nFib;
+        }
+        // loop through 2 and number in ArrayList
+        for(int k = 2; k <= y; k++) {
+            // get number in squence
+           int sum = (k - 1) + (k - 2);
+           // add number to ArrayList
+           nFib.add(sum); 
+        }
+        return nFib;
+    }
+
     // main method
     public static void main(String[] args) {
         // create new class
@@ -85,6 +106,7 @@ class PrimeDirective {
         System.out.println(pd.isPrime(89));
         System.out.println(pd.onlyPrime(numbers));
         System.out.println(pd.printNPrimes(3, numbers));
+        System.out.println(pd.printNFibonacci(3));
         // call printEvenOrOdd on pd
         pd.printEvenOrOdd();
     }
