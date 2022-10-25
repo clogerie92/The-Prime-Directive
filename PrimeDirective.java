@@ -6,7 +6,7 @@ class PrimeDirective {
     public boolean isPrime(int number) {
         // if number is 2 return true
         if(number == 2) {
-            return true;\
+            return true;
           // if number is less than 2 return false  
         } else if(number < 2) {
             return false;
@@ -21,6 +21,12 @@ class PrimeDirective {
         // otherwise return true
         return true;
     }
+    // onlyPrime method to return numbers that are prime
+    ArrayList<Integer> onlyPrime(int[] numbers) {
+        // primes ArrayList
+        ArrayList<Integer> primes = new ArrayList<Integer>();
+        
+    } 
     // main method
     public static void main(String[] args) {
         
